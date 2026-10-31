@@ -1,0 +1,94 @@
+/*
+ * BELLA design tokens — Luxury Minimal.
+ * Contrast notes (on --color-ivory): charcoal 15.5:1, graphite 8.6:1,
+ * champagne-ink 5.6:1 (AA body text). --color-champagne is 2.2:1, so it is
+ * decorative only (lines, fills) and must never carry text.
+ */
+:root {
+  /* Palette */
+  --color-ivory: #f8f4ed;
+  --color-ivory-deep: #f0e9dd;
+  --color-sand: #e2d7c5;
+  --color-stone: #cbbfac;
+  --color-charcoal: #1e1c19;
+  --color-graphite: #4a453f;
+  --color-champagne: #c2a46e;
+  --color-champagne-ink: #7a5c2e;
+  --color-white: #fffdf9;
+  --color-danger: #8f2d22;
+  --color-success: #2f5d3a;
+
+  /* Semantic roles */
+  --surface-page: var(--color-ivory);
+  --surface-raised: var(--color-white);
+  --surface-muted: var(--color-ivory-deep);
+  --text-primary: var(--color-charcoal);
+  --text-secondary: var(--color-graphite);
+  --text-accent: var(--color-champagne-ink);
+  --text-inverse: var(--color-ivory);
+  --border-subtle: var(--color-sand);
+  --border-strong: var(--color-stone);
+  --accent-line: var(--color-champagne);
+  --focus-ring: var(--color-champagne-ink);
+
+  /* Typography — font families are injected by next/font in the root layout */
+  --font-display: var(--font-display-latin), "Times New Roman", serif;
+  --font-body: var(--font-body-latin), system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-2xl: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
+  --text-display: clamp(2.375rem, 1.6rem + 3.6vw, 4.25rem);
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.6;
+  --tracking-wide: 0.18em;
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section-gap: clamp(var(--space-8), 6vw, var(--space-9));
+
+  /* Layout */
+  --container-max: 72rem;
+  --container-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --header-height: 4rem;
+  --touch-target: 2.75rem;
+
+  /* Shape & depth */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 1px 2px rgb(30 28 25 / 0.04), 0 8px 24px rgb(30 28 25 / 0.06);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root:lang(ar) {
+  --font-display: var(--font-display-arabic), var(--font-display-latin), serif;
+  --font-body: var(--font-body-arabic), var(--font-body-latin), system-ui, sans-serif;
+  /* Arabic script needs more line height and no letter spacing to stay legible. */
+  --leading-tight: 1.35;
+  --leading-normal: 1.8;
+  --tracking-wide: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}
