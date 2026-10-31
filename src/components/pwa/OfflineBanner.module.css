@@ -1,0 +1,10 @@
+/* The live region stays mounted (never display:none) so screen readers announce changes. */
+.region {
+  background: var(--color-charcoal);
+  color: var(--text-inverse);
+}
+
+.banner {
+  padding-block: var(--space-3);
+  font-size: var(--text-sm);
+}

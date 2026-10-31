@@ -1,0 +1,26 @@
+.footer {
+  margin-block-start: var(--section-gap);
+  padding-block: var(--space-7);
+  background: var(--color-charcoal);
+  color: var(--text-inverse);
+}
+
+.inner {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.wordmark {
+  font-family: var(--font-display-latin), serif;
+  font-size: var(--text-lg);
+  letter-spacing: 0.32em;
+}
+
+.tagline {
+  color: var(--color-sand);
+}
+
+.note {
+  font-size: var(--text-xs);
+  color: var(--color-stone);
+}

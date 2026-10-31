@@ -1,0 +1,15 @@
+.page {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+  padding-block: clamp(var(--space-8), 14vw, 10rem);
+}
+
+.page h1 {
+  font-size: var(--text-2xl);
+}
+
+.page p {
+  max-inline-size: 34rem;
+  color: var(--text-secondary);
+}
